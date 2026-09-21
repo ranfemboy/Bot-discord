@@ -1,16 +1,12 @@
 /**
  * HD / Remini Image Enhancer — Discord version
  * ---------------------------------------------
- * Extracted from ihancer.com scraper/plugin
- *
  * Usage:
  * - Kirim gambar dengan caption .remini
  * - Reply pesan yang berisi gambar lalu ketik .remini
- *
- * @credit: ren-offc
- * @noted: don't delete the credit
  */
 
+import axios from 'axios';
 import { EmbedBuilder, AttachmentBuilder } from 'discord.js';
 
 export const config = {
@@ -30,37 +26,25 @@ export const config = {
 };
 
 /**
- * Upload image ke ihancer.com
- * lalu mengambil hasil gambar yang sudah di-enhance.
+ * Panggil api-faa.my.id buat upscale gambar dari URL publik (Discord CDN URL langsung dipakai).
+ * @param {string} imageUrl - URL gambar publik (attachment.url dari Discord)
+ * @returns {Promise<string>} URL hasil gambar yang udah di-upscale
  */
-async function photoihancer(imageBuffer, method = 1) {
-    const blob = new Blob([imageBuffer], {
-        type: 'image/jpeg',
-    });
+async function upscaleImage(imageUrl) {
+    const apiUrl = `https://api-faa.my.id/faa/hdv2?url=${encodeURIComponent(imageUrl)}`;
 
-    const form = new FormData();
-
-    form.set('method', String(method));
-    form.set('is_pro_version', 'true');
-    form.set('is_enhancing_more', 'false');
-    form.set('max_image_size', 'high');
-    form.set('file', blob, 'file.jpg');
-
-    const res = await fetch('https://ihancer.com/api/enhance', {
-        method: 'POST',
-        headers: {
-            'User-Agent':
-                'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Mobile Safari/537.36',
-            'Referer': 'https://ihancer.com/app/',
-        },
-        body: form,
-    });
-
-    if (!res.ok) {
-        throw new Error(`${res.status} ${res.statusText}`);
+    let res;
+    try {
+        res = await axios.get(apiUrl, { timeout: 30000 });
+    } catch (err) {
+        throw new Error('Gagal menghubungi API upscale, coba lagi nanti.');
     }
 
-    return Buffer.from(await res.arrayBuffer());
+    if (!res.data?.status || !res.data?.result) {
+        throw new Error('Gagal melakukan upscale, coba lagi.');
+    }
+
+    return res.data.result;
 }
 
 /**
@@ -69,7 +53,6 @@ async function photoihancer(imageBuffer, method = 1) {
  * 2. Pesan yang di-reply
  */
 async function findImage(m) {
-    // Cek gambar langsung di pesan command
     const attachment = m.attachments?.find((a) =>
         a.contentType?.startsWith('image/')
     );
@@ -78,7 +61,6 @@ async function findImage(m) {
         return attachment;
     }
 
-    // Cek pesan yang di-reply
     if (m.reference?.messageId) {
         try {
             const replied = await m.channel.messages.fetch(
@@ -113,23 +95,16 @@ export async function handler(m) {
     const loading = await m.reply('🕕 **Sedang menjernihkan gambar...**');
 
     try {
-        // Download gambar dari Discord
-        const response = await fetch(image.url);
+        const resultUrl = await upscaleImage(image.url);
 
-        if (!response.ok) {
+        const resultResponse = await fetch(resultUrl);
+        if (!resultResponse.ok) {
             throw new Error(
-                `Gagal mengambil gambar Discord: ${response.status} ${response.statusText}`
+                `Gagal mengambil hasil gambar: ${resultResponse.status} ${resultResponse.statusText}`
             );
         }
+        const enhancedBuffer = Buffer.from(await resultResponse.arrayBuffer());
 
-        const imageBuffer = Buffer.from(
-            await response.arrayBuffer()
-        );
-
-        // Kirim ke ihancer
-        const enhancedBuffer = await photoihancer(imageBuffer);
-
-        // Kirim hasil sebagai attachment
         const attachment = new AttachmentBuilder(
             enhancedBuffer,
             {
