@@ -32,7 +32,7 @@ const pluginsPath = path.join(__dirname, 'plugins');
 
 client.once('ready', async () => {
     console.log(`🤖 ${settings.botName} online sebagai ${client.user.tag}`);
-    client.user.setActivity(`Shut up`);
+    client.user.setActivity(`${settings.prefix}menu | ${settings.botName}`);
 
     try {
         const { total, skipped } = await deploySlashCommands(client, settings, { global: true });
