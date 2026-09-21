@@ -13,15 +13,15 @@ export default {
     botName: 'bot discord',
     footerText: '© bot discord',
 
-    thumbnailUrl: 'https://x.xcute.workers.dev/f/images/da6459dbf20f.jpg',
+    thumbnailUrl: 'https://x.xcute.workers.dev/f/images/023b67b6ae65.jpg',
 
     menuSound: 'https://files.catbox.moe/b3rysx.mp3', // muncul sebagai audio player di pesan menu
 
     menuBanners: [
-        'https://x.xcute.workers.dev/f/images/80c3a8491f2e.jpg',
-        'https://x.xcute.workers.dev/f/images/a744d1a4da79.jpg',
-        'https://x.xcute.workers.dev/f/images/46e30dae9c3d.jpg',
-    ],
+    'https://x.xcute.workers.dev/f/images/39b6e1a3342d.jpg',
+    'https://x.xcute.workers.dev/f/images/62b7eb293ada.jpg',
+    'https://x.xcute.workers.dev/f/images/bae45e56b0ea.jpg',
+ ],
 
     supportServerUrl: 'https://discord.gg/cSGfUadrHa',
     supportEmoji: '<a:zclyde_snow:1474998418446483668>',
