@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://x.xcute.workers.dev/f/images/80c3a8491f2e.jpg" alt="Bot Discord Banner" width="100%">
+  <img src="https://x.xcute.workers.dev/f/images/d461054bd06d.jpg" alt="Shorekeeper Bini Ran" width="100%">
 </p>
 
 # 🤖 Bot Discord
