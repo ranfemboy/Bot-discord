@@ -1,0 +1,261 @@
+{
+  "1472935380490784861-1416093284345839616": {
+    "registered": true,
+    "name": "ranzx",
+    "age": 17,
+    "gender": "cowok",
+    "registeredAt": 1785227257386,
+    "coins": 1e+27,
+    "pokeballs": {
+      "pokeball": 3,
+      "greatball": 0,
+      "ultraball": 0,
+      "masterball": 0
+    },
+    "potions": {
+      "potion": 0,
+      "superpotion": 0
+    },
+    "pokemons": [
+      {
+        "uid": "p1",
+        "key": "pikachu",
+        "nickname": null,
+        "level": 10,
+        "exp": 15,
+        "currentHp": 0,
+        "maxHp": 102,
+        "caughtAt": 1785227277610
+      }
+    ],
+    "team": [
+      "p1"
+    ],
+    "pokemonSeq": 1
+  },
+  "1472935380490784861-813762942012227635": {
+    "registered": true,
+    "name": "Ujang",
+    "age": 19,
+    "gender": "cowok",
+    "registeredAt": 1785228337785,
+    "coins": 268,
+    "pokeballs": {
+      "pokeball": 8,
+      "greatball": 0,
+      "ultraball": 0,
+      "masterball": 0
+    },
+    "potions": {
+      "potion": 0,
+      "superpotion": 0
+    },
+    "pokemons": [
+      {
+        "uid": "p1",
+        "key": "krabby",
+        "nickname": null,
+        "level": 5,
+        "exp": 0,
+        "currentHp": 56,
+        "maxHp": 56,
+        "caughtAt": 1785228936671
+      },
+      {
+        "uid": "p2",
+        "key": "onix",
+        "nickname": null,
+        "level": 10,
+        "exp": 0,
+        "currentHp": 92,
+        "maxHp": 92,
+        "caughtAt": 1785228946940
+      },
+      {
+        "uid": "p3",
+        "key": "squirtle",
+        "nickname": null,
+        "level": 10,
+        "exp": 0,
+        "currentHp": 107,
+        "maxHp": 107,
+        "caughtAt": 1785500746508
+      },
+      {
+        "uid": "p4",
+        "key": "meowth",
+        "nickname": null,
+        "level": 6,
+        "exp": 0,
+        "currentHp": 61,
+        "maxHp": 61,
+        "caughtAt": 1785500838662
+      },
+      {
+        "uid": "p5",
+        "key": "psyduck",
+        "nickname": null,
+        "level": 6,
+        "exp": 0,
+        "currentHp": 64,
+        "maxHp": 64,
+        "caughtAt": 1785500886274
+      }
+    ],
+    "team": [
+      "p1",
+      "p2",
+      "p3",
+      "p4",
+      "p5"
+    ],
+    "pokemonSeq": 5
+  },
+  "1472935380490784861-1121355658592268309": {
+    "registered": true,
+    "name": "Ryne",
+    "age": 16,
+    "gender": "cewek",
+    "registeredAt": 1785228880592,
+    "coins": 101504,
+    "pokeballs": {
+      "pokeball": 0,
+      "greatball": 0,
+      "ultraball": 0,
+      "masterball": 0
+    },
+    "potions": {
+      "potion": 0,
+      "superpotion": 0
+    },
+    "pokemons": [
+      {
+        "uid": "p1",
+        "key": "eevee",
+        "nickname": null,
+        "level": 13,
+        "exp": 0,
+        "currentHp": 100,
+        "maxHp": 100,
+        "caughtAt": 1785228943606
+      },
+      {
+        "uid": "p2",
+        "key": "meowth",
+        "nickname": null,
+        "level": 4,
+        "exp": 0,
+        "currentHp": 55,
+        "maxHp": 55,
+        "caughtAt": 1785229044147
+      }
+    ],
+    "team": [
+      "p1",
+      "p2"
+    ],
+    "pokemonSeq": 2
+  },
+  "1472935380490784861-1326721495707291648": {
+    "registered": true,
+    "name": "Juni",
+    "age": 77,
+    "gender": "cowok",
+    "registeredAt": 1785324854177,
+    "coins": 3040,
+    "pokeballs": {
+      "pokeball": 4,
+      "greatball": 0,
+      "ultraball": 0,
+      "masterball": 0
+    },
+    "potions": {
+      "potion": 0,
+      "superpotion": 0
+    },
+    "pokemons": [
+      {
+        "uid": "p1",
+        "key": "abra",
+        "nickname": null,
+        "level": 9,
+        "exp": 0,
+        "currentHp": 77,
+        "maxHp": 77,
+        "caughtAt": 1785324928191
+      }
+    ],
+    "team": [
+      "p1"
+    ],
+    "pokemonSeq": 1
+  },
+  "1472935380490784861-1421521264509456506": {
+    "registered": true,
+    "name": "Han night",
+    "age": 15,
+    "gender": "cowok",
+    "registeredAt": 1785497295100,
+    "coins": 3277,
+    "pokeballs": {
+      "pokeball": 3,
+      "greatball": 0,
+      "ultraball": 0,
+      "masterball": 0
+    },
+    "potions": {
+      "potion": 0,
+      "superpotion": 0
+    },
+    "pokemons": [
+      {
+        "uid": "p1",
+        "key": "onix",
+        "nickname": null,
+        "level": 7,
+        "exp": 75,
+        "currentHp": 78,
+        "maxHp": 82,
+        "caughtAt": 1785497334986
+      }
+    ],
+    "team": [
+      "p1"
+    ],
+    "pokemonSeq": 1
+  },
+  "1526173128106053732-1416093284345839616": {
+    "registered": true,
+    "name": "ran",
+    "age": 15,
+    "gender": "cowok",
+    "registeredAt": 1785604411238,
+    "coins": 1e+69,
+    "pokeballs": {
+      "pokeball": 4,
+      "greatball": 0,
+      "ultraball": 0,
+      "masterball": 0
+    },
+    "potions": {
+      "potion": 0,
+      "superpotion": 0
+    },
+    "pokemons": [
+      {
+        "uid": "p1",
+        "key": "doduo",
+        "nickname": null,
+        "level": 7,
+        "exp": 0,
+        "currentHp": 66,
+        "maxHp": 66,
+        "caughtAt": 1785604460710
+      }
+    ],
+    "team": [
+      "p1"
+    ],
+    "pokemonSeq": 1
+  }
+}
