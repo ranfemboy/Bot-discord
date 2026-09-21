@@ -231,7 +231,9 @@ export default {
     // ⚠️ Secret buat verifikasi webhook, jangan sampai bocor
     saweriaSecret: '18609b7f5fc1d4ce1c7f8f93fc2b5298',
     saweriaMessage: '🎉 **{nama}** baru aja donasi **Rp{jumlah}**!\n💬 "{pesan}"',
-};```
+};
+
+```
 ---
 
 ## 🔑 Konfigurasi `setting.js`
