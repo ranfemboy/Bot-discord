@@ -161,7 +161,7 @@ async function buildSoundAttachment(soundUrl) {
 
     const isLocal = !/^https?:\/\//i.test(soundUrl);
     const cleanExt = path.extname(soundUrl.split('?')[0]) || '.mp3';
-    const fileName = '𝄞 Rei Ayanami' + cleanExt;
+    const fileName = '𝄞 Bot discord' + cleanExt;
 
     try {
         if (isLocal) {
